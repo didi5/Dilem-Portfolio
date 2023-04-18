@@ -1,12 +1,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai';
-import {FaGithub, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import {FaGithub, FaInstagram, FaLinkedinIn} from 'react-icons/fa';
+import {useRouter} from 'next/router'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
+
+    const [navBg, setNavBg] = useState('#126068');
+    const [linkColor, setLinkColor] = useState ('#1f2937');
+    const router= useRouter()
+
+    // for different underpages
+    useEffect(() => {
+        if(
+            router.asPath === '/property' || 
+            router.asPath === '/coach' 
+           ) {
+            setNavBg('transparent')
+            setLinkColor('#1f2937')
+           }
+        else {
+            setNavBg('#126068')
+            setLinkColor('#1f2937')
+        }
+
+
+    }, [router])
+
+
+
 
     const handleNav = () => {
         setNav(!nav);
@@ -24,12 +49,19 @@ const Navbar = () => {
     }, []);
 
   return (
-    <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
+    <div 
+    
+    sytle={{backgroundColor: `${navBg}`}}
+
+    className=
+        {shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
         {/* media queries */}
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+            <Link href= '/#home'> 
         <Image src="/../public/assets/Can_Logo.png" alt="/" width='125' height='50' />
+        </Link>
             <div>
-            <ul className='hidden md:flex'>
+            <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
                 <Link href='/'>
                     
                    <li className='ml-10 text-sm  uppercase hover:text-[#126068]'>Home</li> 

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
-import ContactImg from '../public/assets/user.png';
+
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import { SocialIcon } from 'react-social-icons';
 
@@ -37,29 +37,24 @@ const Contact = () => {
                     <div className='flex items-center justify-between py-4'>
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                             
-                            {/* <FaLinkedinIn /> */}
-                            
                             <SocialIcon network="linkedin" url="https://www.linkedin.com/in/dilemkaya/" style={{ height: 25, width: 25 }}/>
                         </div>
 
                        
 
                         <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            {/* < FaGithub url="https://github.com/didi5/websites" /> */}
-                            {/* <SocialIcon url="https://github.com/didi5/websites" /> */}
+                            
                             <SocialIcon network="github" url="https://github.com/didi5/websites" style={{ height: 25, width: 25 }} />
                           
 
                         </div>
 
                         <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            {/* <FaInstagram /> */}
                             <SocialIcon network="instagram" url="https://www.instagram.com" style={{ height: 25, width: 25 }} />
 
                         </div>
 
                         <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            {/* < AiOutlineMail /> */}
                             <SocialIcon network="email" url="https://dilem.can@yahoo.com" style={{ height: 25, width: 25 }} />
 
                        
@@ -72,13 +67,27 @@ const Contact = () => {
             </div>
                 {/* Right */}
 
+
+
+
                 <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
                 <div className='p-4'>
 
-                    <form >
+
+                
+                    {/* <form className='Netlify Form' method= 'POST' action='contact/?success=true' > */}
+
+                    <form
+                      method='POST'
+                      Classname='contact-form'
+                      action='contact/?success=true'
+                      data-netlify='true'
+                    >
+
+
                         <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                         <div className='flex flex-col'>
-                            <label className='uppercase text-sm py-2'>Name</label>
+                            <label className='uppercase text-sm py-2'>First Name</label>
                             <input
                             className='border-2 rounded-lg p-3 flex border-gray-300'
                             type='text'
@@ -88,12 +97,12 @@ const Contact = () => {
 
                          <div className='flex flex-col'>
                                 <label className='uppercase text-sm py-2'>
-                                Phone Number
+                                Last Name
                                 </label>
                                 <input
                                 className='border-2 rounded-lg p-3 flex border-gray-300'
                                 type='text'
-                                name='phone'
+                                name='name'
                                 />
                         </div>
 
@@ -107,29 +116,30 @@ const Contact = () => {
                                 name='email'
                             />
                     </div>
-                    <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Subject</label>
-                  <input
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
-                    type='text'
-                    name='subject'
-                  />
-                </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Message</label>
-                  <textarea
-                    className='border-2 rounded-lg p-3 border-gray-300'
-                    rows='10'
-                    name='message'
-                  ></textarea>
-                </div>
-                <button className='w-full p-4 text-gray-100 mt-4 '>
-                  Send Message
-                </button>
-        </form>
-                </div>
-            </div>
-        </div>
+                            <div className='flex flex-col py-2'>
+                          <label className='uppercase text-sm py-2'>Subject</label>
+                          <input
+                            className='border-2 rounded-lg p-3 flex border-gray-300'
+                            type='text'
+                            name='subject'
+                          />
+                        </div>
+                        <div className='flex flex-col py-2'>
+                          <label className='uppercase text-sm py-2'>Message</label>
+                          <textarea
+                            className='border-2 rounded-lg p-3 border-gray-300'
+                            rows='10'
+                            name='message'
+                          ></textarea>
+                        </div>
+                        <button className='w-full p-4 text-gray-100 mt-4 '>
+                          Send Message
+                        </button>
+                        </form>
+                        
+                        </div>
+                  </div>
+             </div>
 
         <div className='flex justify-center py-16 text-gray-600'>
         <h2>“Choose to be  optimistic. It feels  <span className='text-[#126068]'>better  </span>.” 
@@ -145,18 +155,13 @@ const Contact = () => {
 
 
         <div className='flex justify-center py-12'>
-        
-
-
           <Link href='/'>
-            
               <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                 <HiOutlineChevronDoubleUp
                   className='text-[#126068]'
                   size={30}
                 />
               </div>
-            
           </Link>
         </div>
 

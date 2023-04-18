@@ -15,21 +15,31 @@ const About = () => {
                 <h2 className='py-4 text-[#126068]'> Who am I</h2>
                 <br/>
 
-                <p>
-                    
-                    Optimism leads me. That's why I am always on improving myself - be it with learning Chinese 
-                   or developing on new skills. 
-                    Take a look into my CV.
+                <h2>Growth Mindset</h2>
+                <p className='py-4 text-gray-600  m-auto'>
+                    Optimism leads me. I love to encourage and motivate others to commit to their goals.
             
                 </p>
+                
 
                 <br/>
-               <p>
+                <h2>Health</h2>
+                <p className='py-4 text-gray-600  m-auto'>
                     As a former professional basketball player, 
-                    I also have a affinity for sports and health.{'\n'} Find out what I offer down below! 
-
-                   
+                    I  have a affinity for sports and health.{'\n'} Brain and Body Health! 
                </p>
+
+               <br/>
+
+               <h2>
+                   Life Long Learning
+               </h2>
+               <p className='py-4 text-gray-600  m-auto'>
+                    I challenge myself daily. Learning Chinese is one thing.
+                    {'\n'} Learning about how to stay young and happy is another.
+               </p>
+
+
         
 
                 {/* <Link href='/#skills'>
@@ -60,7 +70,7 @@ const About = () => {
 
             </div>
             <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-               <Image className='rounded-xl' src="/../public/assets/CV_Pic.png" alt="/" width='395' height='240' /> 
+               <Image className='rounded-xl' src="/../public/assets/me.jpg" alt="/" width='395' height='240' /> 
             </div>
 
         </div>
