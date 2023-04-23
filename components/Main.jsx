@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 import { SocialIcon } from 'react-social-icons';
 import Link from 'next/link';
 import Image from 'next/image';
+import meImg from '../public/assets/circleS.png' ;
 import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 
 // Change the color to my colors
@@ -23,11 +24,11 @@ export const Main = () => {
                
 
                 <h2 className='py-2 text-gray-700'>
-                A perpetual learner and optimist
+                A perpetual learner and optimists
                 </h2>
 
                 <div className='flex justify-center items-center '>
-                        <Image className='rounded-xl hover:scale-105 ease-in duration-300' src='/../public/assets/circle.png'  
+                        <Image className='rounded-xl hover:scale-105 ease-in duration-300' src={meImg}  
                         width='160' height='115' alt='/#about'
                         />
                 </div> 

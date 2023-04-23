@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import webImg from '../public/assets/website.png' 
+import meImg from '../public/assets/meS.jpg' ;
 import Link from 'next/link';
 import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 
@@ -60,7 +60,7 @@ const About = () => {
                         <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                             <HiOutlineChevronDoubleDown
                             className='text-[#126068]'
-                            size={30}
+                            size={20}
                             />
                         </div>
                         
@@ -71,7 +71,7 @@ const About = () => {
 
             </div>
             <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-               <Image className='rounded-xl' src="/../public/assets/meS.jpg" alt="my picture" width='395' height='240' /> 
+               <Image className='rounded-xl' src={meImg} alt="my picture" width='295' height='140' /> 
             </div>
 
         </div>
