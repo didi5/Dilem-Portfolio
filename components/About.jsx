@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import webImg from '../public/assets/website.png' 
 import Link from 'next/link';
 import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 
@@ -70,7 +71,7 @@ const About = () => {
 
             </div>
             <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-               <Image className='rounded-xl' src="/../public/assets/me.jpg" alt="/" width='395' height='240' /> 
+               <Image className='rounded-xl' src="/../public/assets/website.png" alt="my picture" width='395' height='240' /> 
             </div>
 
         </div>
