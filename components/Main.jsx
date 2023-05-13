@@ -4,48 +4,48 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 import { SocialIcon } from 'react-social-icons';
 import Link from 'next/link';
 import Image from 'next/image';
-import meImg from '../public/assets/circleS.png' ;
+import meImg from '../public/assets/circleS.png';
 import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 
 // Change the color to my colors
 
 export const Main = () => {
-  return (
-    <div id='home' className= 'w-full h-screen text-center'>
-        <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
-            <div>
-                
-                
-                <h1 >
-                    I am <span className='text-[#126068]'>Dilem  </span> 
-                    
-                </h1>
+    return (
+        <div id='home' className='w-full h-screen text-center'>
+            <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
+                <div>
 
-               
 
-                <h2 className='py-2 text-gray-700'>
-                A perpetual learner and optimists
+                    <h1 >
+                        I am <span className='text-[#126068]'>Dilem  </span>
+
+                    </h1>
+
+
+
+                    <h2 className='py-2 text-gray-700'>
+                        A perpetual learner and optimist
                 </h2>
 
-                <div className='flex justify-center items-center '>
-                        <Image className='rounded-xl hover:scale-105 ease-in duration-300' src={meImg}  
-                        width='160' height='115' alt='/#about'
+                    <div className='flex justify-center items-center '>
+                        <Image className='rounded-xl hover:scale-105 ease-in duration-300' src={meImg}
+                            width='160' height='115' alt='/#about'
                         />
-                </div> 
+                    </div>
 
-                <p className='py-4 text-gray-600  m-auto'>
-                    I am a web-developer, coach, texter and content-creator. 
+                    <p className='py-4 text-gray-600  m-auto'>
+                        I am a web-developer, coach, texter and content-creator.
                 </p>
 
 
-              
-              
 
 
-                <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
+
+
+                    <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                             {/* <FaLinkedinIn url="https://www.linkedin.com/in/dilemkaya/" /> */}
-                            <SocialIcon network="linkedin" url="https://www.linkedin.com/in/dilemkaya/" style={{ height: 25, width: 25 }}/>
+                            <SocialIcon network="linkedin" url="https://www.linkedin.com/in/dilemkaya/" style={{ height: 25, width: 25 }} />
 
                         </div>
 
@@ -66,31 +66,31 @@ export const Main = () => {
                             <SocialIcon network="email" url="https://dilem.can@yahoo.com" style={{ height: 25, width: 25 }} />
 
                         </div>
+                    </div>
+
+
+                    <div className='flex justify-center py-30'>
+                        <Link href='/#about'>
+
+                            <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                                <HiOutlineChevronDoubleDown
+                                    className='text-[#126068]'
+                                    size={30}
+                                />
+                            </div>
+
+                        </Link>
+                    </div>
+
+
+
+
+
+
+
                 </div>
 
-
-                <div className='flex justify-center py-30'>
-                    <Link href='/#about'>
-                        
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <HiOutlineChevronDoubleDown
-                            className='text-[#126068]'
-                            size={30}
-                            />
-                        </div>
-                        
-                    </Link>
-                </div>
-
-               
-
-               
-               
-
-         
             </div>
-           
         </div>
-    </div>
-  )
+    )
 }
