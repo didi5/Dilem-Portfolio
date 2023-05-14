@@ -61,11 +61,11 @@ export const Main = () => {
 
                         </div>
 
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            {/* < AiOutlineMail /> */}
+                        {/* <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                           
                             <SocialIcon network="email" url="https://dilem.can@yahoo.com" style={{ height: 25, width: 25 }} />
 
-                        </div>
+                        </div> */}
                     </div>
 
 

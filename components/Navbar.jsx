@@ -5,7 +5,9 @@ import logoImg from '../public/assets/Can_Logo.png';
 import React, { useState, useEffect, use } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { SocialIcon } from 'react-social-icons';
+
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -100,7 +102,7 @@ const Navbar = () => {
                     <div>
                         <div className='flex w-full items-center justify-between'>
                             <Link href='/' >
-                                <Image src='/../public/assets/Can_Logo.png' width='87' height='35' alt="/" />
+                                <Image src={logoImg} width='87' height='35' alt="/" />
                             </Link>
 
                             <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
@@ -138,21 +140,23 @@ const Navbar = () => {
                             <p className='uppercase tracking-widest text-[#126068]'>Let's stay in touch</p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaLinkedinIn />
+                                    <SocialIcon network="linkedin" url="https://www.linkedin.com/in/dilemkaya/" style={{ height: 25, width: 25 }} />
+
 
 
                                 </div>
 
-                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                {/* Need to add email addess properly in main, here navbar twice and contact */}
+                                {/* <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                                     <AiOutlineMail />
+                                </div> */}
+
+                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                    <SocialIcon network="github" url="https://github.com/didi5/websites" style={{ height: 25, width: 25 }} />
                                 </div>
 
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaGithub />
-                                </div>
-
-                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaInstagram />
+                                    <SocialIcon network="instagram" url="https://www.instagram.com/can_do_girl/" style={{ height: 25, width: 25 }} />
                                 </div>
 
 

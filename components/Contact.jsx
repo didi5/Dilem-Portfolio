@@ -18,11 +18,11 @@ const Contact = () => {
   return (
     // Media Query
     <div id='contact' className='w-full lg:h-screen'>
-      <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
+      <div className='max-w-[1240px] m-auto px-6 py-8 w-full'>
         <p className='text-xl tracking-widest uppercase text-gray-600'>Contact</p>
         <h2 className='py-4 text-[#126068]'>Let's stay in touch</h2>
         {/* the grid system */}
-        <div className='grid lg:grid-cols-5 gap-8'>
+        <div className='grid lg:grid-cols-4 gap-8'>
           {/* Left */}
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
             <div className='lg:p-4 h-full'>
@@ -59,11 +59,11 @@ const Contact = () => {
 
                   </div>
 
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                  {/* <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <SocialIcon network="email" url="https://dilem.can@yahoo.com" style={{ height: 25, width: 25 }} />
 
 
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -75,13 +75,49 @@ const Contact = () => {
 
 
 
-          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+          <div className='col-span-2 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
 
 
 
-              {/* <form className='Netlify Form' method= 'POST' action='contact/?success=true' > */}
+              <div className='flex justify-center py-16 text-gray-600'>
+                <h2>“Choose to be  optimistic. It feels  <span className='text-[#126068]'>better  </span>.”
+        </h2>
 
+              </div>
+
+              <div className='flex justify-center py-1'>
+
+                <br />
+                <p> Dalai Lama</p>
+              </div>
+
+              <br>
+              </br>
+              <br>
+              </br>
+
+              <div className='flex justify-center py-5'>
+                <Link href='/'>
+                  <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                    <HiOutlineChevronDoubleUp
+                      className='text-[#126068]'
+                      size={30}
+                    />
+                  </div>
+                </Link>
+              </div>
+
+
+
+
+
+              {/* This is the contact form that needs to be adjusted! just 
+              uncomment this and the the form will appear again */}
+
+
+
+              {/* 
               <form
                 method='POST'
                 Classname='contact-form'
@@ -140,13 +176,17 @@ const Contact = () => {
                 <button className='w-full p-4 text-gray-100 mt-4 '>
                   Send Message
                         </button>
-              </form>
+              </form> */}
 
             </div>
           </div>
         </div>
 
-        <div className='flex justify-center py-16 text-gray-600'>
+
+
+        {/* This is the last part */}
+
+        {/* <div className='flex justify-center py-16 text-gray-600'>
           <h2>“Choose to be  optimistic. It feels  <span className='text-[#126068]'>better  </span>.”
         </h2>
 
@@ -168,7 +208,7 @@ const Contact = () => {
               />
             </div>
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </div>
